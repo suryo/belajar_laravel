@@ -13,6 +13,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
 Route::get('/', function () {
-    return view('welcome');
+    return view('home', ['name' => 'James', 'cobahtml' => '<h1>test ini h1 </h1>']);
 });
+
+Route::apiResource('/papi', App\Http\Controllers\PapiController::class);
+
+
+// Route::get('/', function () {
+//     return view('welcome');
+// });
