@@ -1,6 +1,8 @@
 <?php
 
+use App\Http\Controllers\CobaController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,3 +18,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/coba',[CobaController::class,'index']);
+Route::get('/kuro',[CobaController::class,'create']);
