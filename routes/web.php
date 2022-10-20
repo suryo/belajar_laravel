@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CobaController;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,4 +18,6 @@ use App\Http\Controllers\CobaController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/coba',[CobaController::class,'index']);
+
+Route::get('/coba', [CobaController::class, 'index']);
+Route::get('/ayam', [CobaController::class, 'keren']);

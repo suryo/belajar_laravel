@@ -13,72 +13,35 @@ class CobaController extends Controller
      */
     public function index()
     {
-        echo ('Pitik Kalkun');
+        // untuk dump variable kita bisa menggunakan perintah
+        // ::dump -> perintah ini memunculkan isi variable 
+        //   dengan tetap menjalankan perintah code dibawahnya
+        // ::dd -> perintah ini memunculkan isi variable 
+        //   dengan tidak menjalankan perintah code dibawahnya
+
+        $inivar = 1;
+        $inivar = 4;
+        $iniarray = [];
+        $iniarray[0] = "ini isi array 0";
+        $iniarray[1] = "ini isi array 1";
+        $iniarray[2] = "ini isi array 2";
+        $iniarray[3] = "ini isi array 3";
+        $iniarray[4] = "ini isi array 4";
+        $iniarray[5] = "ini isi array 5";
+        for ($i = 0; $i < count($iniarray); $i++) {
+
+            if ($i == 3) {
+            }
+        }
+
+        $asik = 5;
+
+        return view('coba', compact('inivar', 'iniarray'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function keren()
     {
         //
-    }
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        echo ("ini ada di function keren");
     }
 }
