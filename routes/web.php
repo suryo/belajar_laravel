@@ -4,6 +4,7 @@ use App\Http\Controllers\CobaController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,5 +20,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/coba',[CobaController::class,'index']);
-Route::get('/kuro',[CobaController::class,'create']);
+Route::get('/coba', [CobaController::class, 'index']);
+Route::get('/ayam', [CobaController::class, 'keren']);
