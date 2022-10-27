@@ -4,8 +4,6 @@ use Illuminate\Support\Facades\Route;
 use App\http\controllers\CobaController;
 use App\http\controllers\HomeController;
 
-use App\Http\Controllers\CobaController;
-use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,8 +15,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
-Route::get('/home', [HomeController::class, 'index']);
-Route::get('/coba', [CobaController::class, 'index']);
-Route::get('/ayam', [CobaController::class, 'keren']);
+Route::get('/coba', [CobaController::class, 'index'])->name('coba');
+Route::get('/ayam', [CobaController::class, 'keren'])->name('ayam');
