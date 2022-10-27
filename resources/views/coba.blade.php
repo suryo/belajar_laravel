@@ -16,5 +16,7 @@
         <br>
     @endforeach
 
+    <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">home</a>
+    <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">test</a>
 </body>
 </html>
