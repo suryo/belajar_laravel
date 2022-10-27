@@ -13,14 +13,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        // untuk dump variable kita bisa menggunakan perintah
-        // ::dump -> perintah ini memunculkan isi variable 
-        //   dengan tetap menjalankan perintah code dibawahnya
-        // ::dd -> perintah ini memunculkan isi variable 
-        //   dengan tidak menjalankan perintah code dibawahnya
-
-        $title = 'home';
+        $title = 'HOME';
         return view('home', compact('title'));
     }
-
 }
