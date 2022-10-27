@@ -4,7 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\http\controllers\CobaController;
 use App\http\controllers\HomeController;
 
-
+use App\Http\Controllers\CobaController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,9 +17,7 @@ use App\http\controllers\HomeController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index']);
 Route::get('/coba', [CobaController::class, 'index']);

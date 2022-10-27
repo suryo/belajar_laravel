@@ -7,6 +7,11 @@
     <title>{{$title}}</title>
 </head>
 <body>
-    <h1>Selamat Datang</h1> 
+    <h1>Selamat Datang</h1>
+    
+   
+
+    {{-- <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">home</a>
+    <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">test</a> --}}
 </body>
 </html>
