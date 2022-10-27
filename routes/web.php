@@ -17,7 +17,7 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('home.index');
 
-Route::get('/coba', [CobaController::class, 'index']);
-Route::get('/ayam', [CobaController::class, 'keren']);
+Route::get('/coba', [CobaController::class, 'index'])->name('coba');
+Route::get('/ayam', [CobaController::class, 'keren'])->name('ayam');
