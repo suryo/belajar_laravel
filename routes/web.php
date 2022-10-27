@@ -3,8 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\http\controllers\CobaController;
 
->>>>>>> web/malam-ana
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
