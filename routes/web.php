@@ -1,7 +1,12 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\http\Controllers\testcontroller;
+=======
+use App\http\controllers\CobaController;
+
+>>>>>>> web/malam-ana
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +22,6 @@ use App\http\Controllers\testcontroller;
 Route::get('/', function () {
     return view('coba');
 });
+
+Route::get('/coba', [CobaController::class, 'index']);
+Route::get('/ayam', [CobaController::class, 'keren']);
