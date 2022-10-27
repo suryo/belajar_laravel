@@ -1,9 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-use App\http\Controllers\testcontroller;
-=======
 use App\http\controllers\CobaController;
 
 >>>>>>> web/malam-ana
