@@ -15,7 +15,7 @@ use App\http\controllers\CobaController;
 */
 
 Route::get('/', function () {
-    return view('coba');
+    return view('welcome');
 });
 
 Route::get('/coba', [CobaController::class, 'index']);
