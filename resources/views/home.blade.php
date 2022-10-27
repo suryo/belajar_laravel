@@ -11,7 +11,7 @@
     
    
 
-    {{-- <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">home</a>
-    <a href="{{ route('post.index') }}" class="btn btn-md btn-secondary">test</a> --}}
+    <a href="{{ route('home') }}" class="btn btn-md btn-secondary">home</a>
+    <a href="{{ route('coba') }}" class="btn btn-md btn-secondary">test</a> --}}
 </body>
 </html>
