@@ -19,3 +19,6 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/coba', [CobaController::class, 'index'])->name('coba');
 Route::get('/ayam', [CobaController::class, 'keren'])->name('ayam');
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
