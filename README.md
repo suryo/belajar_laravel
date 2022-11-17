@@ -9,3 +9,10 @@
 
 - Create Controller : php artisan make:controller ProdukController -r
 - Check Route List : php artisan route:list
+Nama Kelompok : 
+1. Ana Febri Yanti
+2. Faisal 
+3. Andy
+4. Lutfi
+5. Sasa
+6. Haris
