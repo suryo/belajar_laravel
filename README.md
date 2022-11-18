@@ -7,9 +7,10 @@ php artisan serve --host 127.0.0.1
 Role
 Create Controller : php artisan make:controller ProdukController -r
 Check Route List : php artisan route:list Nama Kelompok :
-Ana Febri Yanti
-Faisal
-Andy
-Lutfi
-Sasa
-Haris
+
+1. Ana
+2. Faisal
+3. Andy
+4. Lutfi
+5. Sasa
+6. Haris
