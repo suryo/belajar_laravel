@@ -1,9 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\http\controllers\CobaController;
-use App\http\controllers\HomeController;
-
+use App\Http\Controllers\CobaController;
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -21,4 +20,4 @@ Route::get('/coba', [CobaController::class, 'index'])->name('coba');
 Route::get('/ayam', [CobaController::class, 'keren'])->name('ayam');
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'index'])->name('beranda');
