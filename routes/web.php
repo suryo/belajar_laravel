@@ -2,8 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 
-use App\Http\Controllers\CobaController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\CategoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +15,9 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/', function () {
+    return view('welcome');
+});
 
-Route::get('/coba', [CobaController::class, 'index'])->name('coba');
-Route::get('/ayam', [CobaController::class, 'keren'])->name('ayam');
-Auth::routes();
-
-Route::get('/beranda', [App\Http\Controllers\HomeController::class, 'index'])->name('beranda');
+Route::get('/News', [NewsController::class, 'index'])->name('News');
+Route::get('/Category', [CategoryController::class, 'index'])->name('Category');
