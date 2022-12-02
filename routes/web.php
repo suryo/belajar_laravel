@@ -18,5 +18,9 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/news', [NewsController::class, 'index'])->name('news');
-Route::get('/category', [CategoryController::class, 'index'])->name('category');
+Route::get('/getnews', [NewsController::class, 'index'])->name('getnews');
+Route::get('/getcategory', [CategoryController::class, 'index'])->name('getcategory');
+
+Route::post('/postnews', [NewsController::class, 'store'])->name('postnews');
+Route::post('/postcategory', [CategoryController::class, 'store'])->name('postcategory');
+

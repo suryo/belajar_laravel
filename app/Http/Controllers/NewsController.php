@@ -15,7 +15,7 @@ class NewsController extends Controller
     public function index()
     {
         $resnews = DB::select("select * from tbl_news as n inner join tbl_category as c on n.id_category = c.id");
-        dd($resnews);
+        return $resnews;
 
     }
 
