@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\HomeController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,12 +17,18 @@ use Illuminate\Support\Facades\Route;
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
-    return view('home', ['name' => 'James', 'cobahtml' => '<h1>test ini h1 </h1>']);
-});
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index']);
 
 Route::apiResource('/papi', App\Http\Controllers\PapiController::class);
 
+Route::get('send-mail', function () {
+    $details = [
+        'title' => 'Mail from indraco',
+        'body' => 'This is for testing email using smtp'
+    ];
+    \Mail::to('suryoatmojo@uwp.ac.id')->send(new \App\Mail\MyTestMail($details));
+    dd("Email is Sent from indraco.");
+});
 
 // Route::get('/', function () {
 //     return view('welcome');
