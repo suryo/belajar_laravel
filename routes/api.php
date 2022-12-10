@@ -16,6 +16,8 @@ use App\Http\Controllers\Api\NewsController;
 */
 
 Route::get('/getnewsapi', [NewsController::class, 'index'])->name('getnewsapi');
+Route::post('/postnewsapi', [NewsController::class, 'store'])->name('postnewsapi');
+
 
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {

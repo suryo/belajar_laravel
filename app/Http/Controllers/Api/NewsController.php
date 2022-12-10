@@ -37,7 +37,23 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        //dd("test");
+        $id_category = $request->id_category;
+        $tittle = $request->tittle;
+        $content = $request->content;
+
+        $postnews = DB::insert("INSERT into tbl_news (id_category,tittle,content) VALUES ('" . $id_category . "','" . $tittle . "','" . $content . "')");
+        if ($postnews) {
+            $res = json_encode(
+                ['status' => 'success']
+            );
+        } else {
+            $res = json_encode(
+                ['status' => 'failed']
+            );
+        }
+
+        return $res;
     }
 
     /**
