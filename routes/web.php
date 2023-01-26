@@ -18,7 +18,18 @@ use App\Http\Controllers\CategoryController;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/login', [LoginController::class, 'index'])->name('');
+
 Route::get('/getnews', [NewsController::class, 'index'])->name('getnews');
+Route::post('/postnews', [NewsController::class, 'create'])->name('postnews');
+Route::get('/editnews/{id}', [NewsController::class, 'edit'])->name('editnews');
+Route::post('/updatenews', [NewsController::class, 'update'])->name('updatenews');
+
+Route::get('/deletenews/{id}', [NewsController::class, 'destroy'])->name('deletenews');
+
+
 Route::get('/getcategory', [CategoryController::class, 'index'])->name('getcategory');
 
 Route::post('/postnews', [NewsController::class, 'store'])->name('postnews');

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use DB;
 
 class CategoryController extends Controller
 {
@@ -13,7 +14,8 @@ class CategoryController extends Controller
      */
     public function index()
     {
-        dd("ini category news gaes");
+        $rescategory = DB::select("select * from tbl_category");
+        return $rescategory;
     }
 
     /**
@@ -34,7 +36,24 @@ class CategoryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $category = $request->category;
+        if(empty($category))
+        {
+           $res = "data kosong";
+        }
+        else
+        {
+            $insertdb = DB::insert("insert into tbl_category(category) values('".$category."')");
+            if($insertdb)
+            {
+                $res = 'success';
+            }
+            else
+            {
+                $res = 'wooii error gaes';
+            }
+        }
+        return $res;
     }
 
     /**

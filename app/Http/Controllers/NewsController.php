@@ -14,8 +14,10 @@ class NewsController extends Controller
      */
     public function index()
     {
-        $resnews = DB::select("select * from tbl_news as n inner join tbl_category as c on n.id_category = c.id");
-        return $resnews;
+        $resnews = DB::select("select n.id as idnews,n.tittle,n.content from tbl_news as n inner join tbl_category as c on n.id_category = c.id");
+        $test = "ini var";
+        return view('news.index',compact('resnews'));
+
 
     }
 
@@ -26,7 +28,8 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('news.add');
+
     }
 
     /**
@@ -59,7 +62,10 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+       
+        $resfindnews = DB::select("SELECT * from tbl_news where id=".$id);
+        $findnews = $resfindnews[0];
+        return view('news.edit',compact('findnews'));
     }
 
     /**
@@ -69,9 +75,16 @@ class NewsController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request)
     {
-        //
+        $id = $request->id;
+        $tittle = $request->tittle;
+        $content = $request->content;
+
+        $updatenews = DB::update("UPDATE tbl_news SET tittle = '".$tittle."', content = '".$content."' WHERE id = ".$id."; ");
+        
+        return redirect()->route('getnews');
+
     }
 
     /**
@@ -82,6 +95,8 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $deletenews = DB::delete("DELETE FROM tbl_news WHERE id=".$id.";");
+        return redirect()->route('getnews');
+
     }
 }
